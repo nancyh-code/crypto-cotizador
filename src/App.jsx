@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import ImagenCripto from "./img/imagen-criptos.png";
 import Formulario from "./components/Formulario";
+import Resultado from "./components/Resultado";
 
 const Contenedor = styled.div`
   max-width: 900px;
@@ -21,7 +22,7 @@ const Imagen = styled.img`
 `;
 const Heading = styled.h1`
   font-family: "Lato", sans-serif;
-  color: #fff;
+  color: #f5f5f5;
   text-align: center;
   font-weight: 700;
   margin-top: 90px;
@@ -41,6 +42,8 @@ const Heading = styled.h1`
 function App() {
   const [monedas, setMonedas] = useState({});
   const [resultado, setResultado] = useState({});
+
+  //console.log(resultado);
 
   useEffect(() => {
     if (Object.keys(monedas).length > 0) {
@@ -62,6 +65,7 @@ function App() {
       <div>
         <Heading>Cotiza Criptomonedas al Instante</Heading>
         <Formulario setMonedas={setMonedas} />
+        {resultado.PRICE && <Resultado resultado={resultado} />}
       </div>
     </Contenedor>
   );
