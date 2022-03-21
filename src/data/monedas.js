@@ -4,7 +4,7 @@ const monedas = [
   { id: "CLP", nombre: "Peso Chileno" },
   { id: "COP", nombre: "Peso Colombiano" },
   { id: "EUR", nombre: "Euro" },
-  { id: "GDP", nombre: "Libra Esterlina" },
+  { id: "GBP", nombre: "Libra Esterlina" },
   { id: "CNY", nombre: "Yuan Renminbi Chino" },
 ];
 
